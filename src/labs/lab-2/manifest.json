@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Cars everywhere",
+  "action": {
+    "default_popup": "car-settings.html",
+    "default_icon": "car-icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/watch?v=*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ]
+}
